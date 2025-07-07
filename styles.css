@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif; /* professional font */
+  position: relative;
+  background: #e0f7fa;
+}
+
+.animated-gradient {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(-45deg, #89f7fe, #66a6ff, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  z-index: 0;
+  top: -50%;
+  left: -50%;
+  opacity: 1;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.weather-container {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 24px;
+  border: 2px solid #66a6ff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 540px;
+  text-align: center;
+  z-index: 1;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.weather-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff; /* solid white */
+  color: #000;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:hover {
+  border-color: #66a6ff;
+  box-shadow: 0 0 8px rgba(102, 166, 255, 0.4); /* subtle glow on hover/focus */
+}
+
+.input-group button {
+  padding: 14px 18px;
+  border: none;
+  background: #66a6ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.input-group button:hover {
+  background: #89f7fe;
+  transform: scale(1.05);
+}
+
+.result {
+  font-size: 16px;
+  color: #000;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.result p {
+  margin: 8px 0;
+}
