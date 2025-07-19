@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #000;
-  font-family: 'Poppins', 'Helvetica Neue', sans-serif; /* professional font */
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
   position: relative;
   background: #e0f7fa;
 }
@@ -26,9 +26,9 @@ body {
 }
 
 @keyframes gradientAnimation {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .weather-container {
@@ -67,7 +67,7 @@ h1 {
   padding: 14px;
   border: 1px solid #ccc;
   outline: none;
-  background: #fff; /* solid white */
+  background: #fff;
   color: #000;
   font-size: 16px;
   transition: border 0.3s, box-shadow 0.3s;
@@ -76,14 +76,14 @@ h1 {
 .input-group input:focus,
 .input-group input:hover {
   border-color: #66a6ff;
-  box-shadow: 0 0 8px rgba(102, 166, 255, 0.4); /* subtle glow on hover/focus */
+  box-shadow: 0 0 8px rgba(102, 166, 255, 0.4);
 }
 
 .input-group button {
   padding: 14px 18px;
   border: none;
-  background: #66a6ff;
-  color: #fff;
+  background: #fa0000;
+  color: #d1b3b3;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
@@ -104,4 +104,33 @@ h1 {
 
 .result p {
   margin: 8px 0;
+}
+
+.city-clickable {
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.city-clickable:hover {
+  color: #0077ff;
+  text-decoration: underline;
+}
+
+.season-info {
+  margin-top: 15px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* date */
+.date-container {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
 }
