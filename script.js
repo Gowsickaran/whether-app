@@ -128,7 +128,7 @@ function showCurrentDate() {
     day: 'numeric'
   };
 
-  //const formattedDate = now.toLocaleDateString('en-US', options);
+  const formattedDate = now.toLocaleDateString('en-US', options);
   dateContainer.textContent = formattedDate;
 }
 
